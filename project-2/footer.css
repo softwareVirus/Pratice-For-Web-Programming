@@ -1,0 +1,43 @@
+footer {
+    background-color: white;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 1500px;
+}
+
+#explain-container {
+    width: 200px;
+    display: flex;
+    margin-right: 40%;
+    text-align: center;
+}
+
+#links {
+    flex-direction: column;
+    display: flex;
+}
+
+#links > a:hover {
+    background-color: black;
+    color: white;
+    transition: all 0.3s ease-in;
+}
+
+.social-media {
+    width: 70px;
+    text-align: center;
+    padding: 5px 3px;
+    margin-bottom: 8px;
+    border: 1px solid black;
+    border-radius: 3px;
+}

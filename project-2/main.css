@@ -1,0 +1,34 @@
+#main-image{
+    width: 100%;
+}
+body{
+    background: linear-gradient(0deg, black , #303030 95%);
+    margin: 0px 0px;
+}
+#main-container {
+    background-image: url('./celluloid-shot0006.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 800px;
+    max-width: 1900px;
+    display: flex;
+    height: 800px;
+    justify-content: end;
+}
+#main-text{
+    width: 700px;
+    height: 600px;
+    color: white;
+    font-size: 20px;
+}
+#main-header{
+    font-size: 80px;
+    color: white;
+}
+#main-content {
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10%;
+    padding-right: 10%;
+    align-items: center;
+}
