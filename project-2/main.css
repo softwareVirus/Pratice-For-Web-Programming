@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 #main-image{
     width: 100%;
 }
@@ -6,12 +10,10 @@ body{
     margin: 0px 0px;
 }
 #main-container {
-    background-image: url('./celluloid-shot0006.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url('./tanjiro-kamado-flame-kimetsu-no-yaiba-uhdpaper.com-hd-3.1429.jpg');
     background-repeat: no-repeat;
-    background-size: 100% 800px;
-    max-width: 1900px;
+    background-size: 100% 100%;
     display: flex;
-    height: 800px;
     justify-content: end;
 }
 #main-text{
@@ -25,10 +27,9 @@ body{
     color: white;
 }
 #main-content {
-    opacity: 1;
     display: flex;
     flex-direction: column;
-    padding-top: 10%;
+    padding-top: 18%;
     padding-right: 10%;
     align-items: center;
 }
