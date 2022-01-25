@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+}
+
+
+#logo a , .nav-items a,.char-info a{
+    text-decoration: none;
+    color: lightseagreen;
+}
+
+
+#header-container {
+    display: flex;
+    align-items: center;
+    max-width: 1500px;
+    margin: 1rem auto;
+    justify-content: space-between;
+
+}
+
+@media (max-width: 1564px) {
+    #header-container {
+        margin: 1rem 2rem;
+    }
+}
+
+@media (max-width: 700px) {
+    html {
+        font-size: 7px;
+    }
+}
+
+#logo-content {
+    font-size: 2rem;
+    font-weight: 600;
+    font-family:'Times New Roman', Times, serif;
+}
+
+#logo-content,.nav-items > a:visited  {
+    color: lightseagreen;
+}
+
+
+#nav-menu {
+    display: flex;
+}
+
+.nav-items{
+    list-style-type: none;
+    margin-left: 2rem;
+    font-size: 1.25rem;
+}
+
+#logo a span:hover,.nav-items a:hover{
+    background-color: lightseagreen;
+    padding: 5px;
+    color: white;
+    border-radius: 3px;
+    transition: all 0.3s ease-in;
+}

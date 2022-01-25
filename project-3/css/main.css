@@ -1,0 +1,34 @@
+#main-container {
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('../image/tanjiro-kamado-flame-kimetsu-no-yaiba-uhdpaper.com-hd-3.1429.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 55vw;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#main-content {
+    color: #fff;
+    font-size: 2vw;
+    width: 20em;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 19%;
+    text-align: center;
+    margin-right: 4%;
+}
+
+@media (max-width: 376px) {
+    #main-content {
+        font-size: 8px;
+        text-shadow: 1px 1px 2px black;
+    }
+
+    #main-container {
+        background: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0,0,0,0.45)),url('../image/tanjiro-kamado-flame-kimetsu-no-yaiba-uhdpaper.com-hd-3.1429.jpg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+}
