@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <h1>WEATHER APP</h1>
+    <script>
+        async function WeatherApp(){
+            let dataCity = []
+
+            async function getWeather(city) {
+                const data = await fetch('http://api.openweathermap.org/data/2.5/weather?q='+city+'&units=metric&appid=b57b4239b9a9a50192f09288e4716704');
+                await dataCity.push(await data.json())
+            }
+
+            const city = ['Izmir,tr','London,uk','Boston,us','Tokyo,jp','Berlin,de']
+
+            for(let i of city) {
+                await getWeather(i)
+            }
+            console.log(dataCity)
+
+            let root = document.getElementById('root')
+            root.innerHTML=''
+
+            for(var i = 0; i < dataCity.length; i++) {
+                let weatherDiv = document.createElement('div')
+                weatherDiv.className = 'weather-container w'+i+"th-container"
+
+                let cityName = document.createElement('h2')
+                cityName.innerHTML = dataCity[i].name
+                
+                let image = document.createElement('img')
+                image.src = 'http://openweathermap.org/img/w/'+dataCity[i].weather[0].icon+'.png'
+                image.alt = dataCity[i].name+"-weather"
+
+                let today = document.createElement("h4")
+                today.innerHTML = 'Today'
+                
+                let degree = document.createElement("h4")
+                degree.innerHTML = Math.round(dataCity[i].main.temp)+'\xB0C'
+
+                weatherDiv.appendChild(cityName)
+                weatherDiv.appendChild(image)
+                weatherDiv.appendChild(today)
+                weatherDiv.appendChild(degree)
+                root.appendChild(weatherDiv) 
+            }
+        }
+        WeatherApp()
+        setInterval(WeatherApp(),10000)
+    </script>
+    <div id="root"></div>
+</body>
+</html>

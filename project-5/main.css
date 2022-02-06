@@ -1,0 +1,37 @@
+body {
+    background-color: darkblue;
+    font-size: 20px;
+}
+
+#root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 8% 0;
+}
+
+.weather-container {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: cornflowerblue;
+    color: #fff;
+    padding: 1%;
+    border-radius: 2%;
+}
+
+
+body > h1 {
+    color: white;
+    text-align: center;
+    font-size: 5rem;
+}
+
+.w0th-container,.w1th-container,.w2th-container,.w3th-container {
+    margin-right: 3%;
+}
+
+.weather-container > img {
+    width: 60%;
+}
