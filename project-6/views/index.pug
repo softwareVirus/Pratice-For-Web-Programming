@@ -1,0 +1,50 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document 
+        style. 
+            body {
+                background-color: blue;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                color: white;
+            }
+            .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+            }
+            .weather-info {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 25%;
+            }
+            form{
+                margin-bottom: 15px;
+            }
+            
+    body 
+        h1.
+            WEATHER APP
+        form(action="/result", method="post") 
+            input(type="text",name="send")
+            input(type="submit", value="Submit")
+        div.container
+            -let image_sources = []
+            -for(let i = 0; i < main.length; i++) image_sources.push(['http://openweathermap.org/img/w/'+main[i].weather[0].icon+'.png',main[i].weather[0].description])
+            -for(let i = 0; i < main.length; i++) 
+                div.weather-info
+                    div. 
+                        #{main[i].name}
+                    div
+                        img(src=image_sources[i][0], alt=image_sources[i][1], srcset="")
+                    div.
+                        #{main[i].main.temp+'\xB0C'}
