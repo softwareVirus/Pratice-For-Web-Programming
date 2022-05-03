@@ -14,15 +14,15 @@ app.use(bodyParser.json())
 app.set('views', './views');
 app.set('view engine', 'pug');
 
-app.get("/", async (req,res) => {
+app.get("/", (req,res) => {
     const query = ["London","Boston","Tokyo"];
     let results = []
 
-    await query.map( item => {
+    query.map( item => {
         const url = "https://api.openweathermap.org/data/2.5/weather?q="+ item +"&appid="+ process.env.API_KEY +"&units=metric";
         https.get(url,(response) => {
-            response.on("data", async (data) => {
-                const response_data = await JSON.parse(data)
+            response.on("data", (data) => {
+                const response_data = JSON.parse(data)
                 results.push(response_data)
                 if(results.length == query.length) {
                     res.render("index.pug",{main : results})
@@ -40,8 +40,8 @@ app.post("/result",(req,res) => {
     const url = "https://api.openweathermap.org/data/2.5/weather?q="+ city +"&appid="+ process.env.API_KEY +"&units=metric";
 
     https.get(url,(response) => {
-        response.on('data',async (data) => {
-            const response_data = await JSON.parse(data)
+        response.on('data',(data) => {
+            const response_data = JSON.parse(data)
             if(response.statusCode < 401) {
                 res.render("result.pug",{main : response_data})
             } else {
