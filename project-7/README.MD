@@ -10,8 +10,9 @@
   npm install
   npm start
 ```
-after that open second terminal in project-7/client
+
 ```
+  After that open second terminal in project-7/client
   in second terminal comments
   
   npm start
