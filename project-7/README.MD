@@ -1,6 +1,14 @@
 # MERN project - TODO APP
 
 
+## To Access mongodb 
+  ```
+    create .env folder 
+    add 
+      ATLAS_URI=mongodb+srv://trial_user:123456789A@cluster0.8sf1t.mongodb.net/SIMPLE_PROJECT_MERN?retryWrites=true&w=majority
+  ```
+
+
 ## To install the packages apply the comments
 ```
   open terminal in project-7 folder
