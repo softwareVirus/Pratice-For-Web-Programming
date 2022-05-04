@@ -1,0 +1,9 @@
+.App {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  padding: 2%;
+}
