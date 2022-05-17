@@ -15,7 +15,7 @@
 
             async function getWeather(city) {
                 const data = await fetch('http://api.openweathermap.org/data/2.5/weather?q='+city+'&units=metric&appid=b57b4239b9a9a50192f09288e4716704');
-                await dataCity.push(await data.json())
+                dataCity.push(await data.json())
             }
 
             const city = ['Izmir,tr','London,uk','Boston,us','Tokyo,jp','Berlin,de']
